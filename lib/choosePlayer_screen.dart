@@ -11,6 +11,7 @@ import './lst.dart';
 class ChoosePlayerScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var mediaQuery = MediaQuery.of(context);
     return Scaffold(
       appBar: AppBar(title: Text('Choose Player'),
       ),
@@ -26,94 +27,103 @@ class ChoosePlayerScreen extends StatelessWidget {
 
           children: [
 
-
-
-              
-
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              // crossAxisAlignment: CrossAxisAlignment.center,
 
               children:[
 
-              Container(
-                margin: EdgeInsets.all(20),
-                child: ElevatedButton(
-                  
-                  child: Text('Play With Bot'),
 
+            
+            Container(
+              // margin: EdgeInsets.all(10),
+              height: mediaQuery.size.width*0.4,
+              width: mediaQuery.size.width*0.4,
+              child: InkWell(
+                
+      onTap: () {
 
-                  onPressed: (){
-
-                    isBotEnabled = true;
+        isBotEnabled = true;
                     reset(LST);
 
                   Navigator.of(context).push(MaterialPageRoute(builder: (_){
 
-                  return MyHomePage();
-
-                  },
-                  ),
-                  );
+                    return MyHomePage();
+                    },),);
+        
 
 
-                  },
-                  
-                  
-                  ),
-              ),
+      },
+      splashColor: Theme.of(context).primaryColor,
+      borderRadius: BorderRadius.circular(15),
+      child: Container(
+        padding: const EdgeInsets.all(10),
+        // margin: const EdgeInsets.all(10),
+        child: Center(
+          child: Text(
+            "BOT",
+            style: Theme.of(context).textTheme.title,
+          ),
+        ),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+                colors: [
+                  Colors.green.withOpacity(0.7),
+                  Colors.green,
+                ],
+                begin: AlignmentDirectional.topStart,
+                end: AlignmentDirectional.bottomEnd),
+          borderRadius: BorderRadius.circular(15),
+        ),
+      ),
+    ),
+            ),
+
+
 
             Container(
-              margin: EdgeInsets.all(20),
-              child: ElevatedButton(
-                
-                child: Text('2 Player'),
+              height: mediaQuery.size.width*0.4,
+              width: mediaQuery.size.width*0.4,
+              // margin: EdgeInsets.all(10),
+              child: InkWell(
+      onTap: () {
+
+        isBotEnabled = false;
+                    reset(LST);
+
+                  Navigator.of(context).push(MaterialPageRoute(builder: (_){
+
+                    return MyHomePage();
+                    },),);
+        
 
 
-                onPressed: (){
-
-                  isBotEnabled = false;
-                  reset(LST);
-
-                Navigator.of(context).push(MaterialPageRoute(builder: (_){
-
-                  return MyHomePage();
-
-                    },
-                  ),
-                );
-
-
-                },
-                
-                
-                ),
-            ),
-            /////////////////////////////////////////////////////////////////
+      },
+      splashColor: Theme.of(context).primaryColor,
+      borderRadius: BorderRadius.circular(15),
+      child: Container(
+        padding: const EdgeInsets.all(10),
+        // margin: const EdgeInsets.all(10),
+        child: Center(
+          child: Text(
+            "2 Player",
+            style: Theme.of(context).textTheme.title,
             
-    //         InkWell(
-    //   onTap: () => selectCategory(context),
-    //   splashColor: Theme.of(context).primaryColor,
-    //   borderRadius: BorderRadius.circular(15),
-    //   child: Container(
-    //     padding: const EdgeInsets.all(10),
-    //     // margin: const EdgeInsets.all(10),
-    //     child: Text(
-    //       "BOT",
-    //       style: Theme.of(context).textTheme.title,
-    //     ),
-    //     decoration: BoxDecoration(
-    //       gradient: LinearGradient(
-    //           colors: [
-    //             color.withOpacity(0.7),
-    //             color,
-    //           ],
-    //           begin: AlignmentDirectional.topStart,
-    //           end: AlignmentDirectional.bottomEnd),
-    //       borderRadius: BorderRadius.circular(15),
-    //     ),
-    //   ),
-    // ),
+          ),
+        ),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+                colors: [
+                  Colors.green.withOpacity(0.7),
+                  Colors.green,
+                ],
+                begin: AlignmentDirectional.topStart,
+                end: AlignmentDirectional.bottomEnd),
+          borderRadius: BorderRadius.circular(15),
+        ),
+      ),
+    ),
+            ),
 
 
 
