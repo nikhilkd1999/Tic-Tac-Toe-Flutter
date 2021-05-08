@@ -89,6 +89,36 @@ class ChoosePlayerScreen extends StatelessWidget {
                 
                 ),
             ),
+            /////////////////////////////////////////////////////////////////
+            
+    //         InkWell(
+    //   onTap: () => selectCategory(context),
+    //   splashColor: Theme.of(context).primaryColor,
+    //   borderRadius: BorderRadius.circular(15),
+    //   child: Container(
+    //     padding: const EdgeInsets.all(10),
+    //     // margin: const EdgeInsets.all(10),
+    //     child: Text(
+    //       "BOT",
+    //       style: Theme.of(context).textTheme.title,
+    //     ),
+    //     decoration: BoxDecoration(
+    //       gradient: LinearGradient(
+    //           colors: [
+    //             color.withOpacity(0.7),
+    //             color,
+    //           ],
+    //           begin: AlignmentDirectional.topStart,
+    //           end: AlignmentDirectional.bottomEnd),
+    //       borderRadius: BorderRadius.circular(15),
+    //     ),
+    //   ),
+    // ),
+
+
+
+
+
 
             ],
 
