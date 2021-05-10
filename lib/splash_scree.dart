@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -6,16 +5,16 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-          height: 900,
-          width: 700,
-          color: Colors.deepPurple,
-          child: Container(
-            
-          height: 550,
-          width: 900,
-            child: Image.asset('assets/images/xo.gif',alignment:Alignment.center, fit:BoxFit.contain,height: 400,width: 400,)),
-          // child: Image.asset('assets/images/xo.riv', fit: BoxFit.cover,),
-
+        width: double.infinity,
+        height: 900,
+        color: Colors.deepPurple,
+        child: Container(
+            child: Image.asset(
+          'assets/images/xo.gif',
+          alignment: Alignment.center,
+          fit: BoxFit.contain,
+        )),
+        // child: Image.asset('assets/images/xo.riv', fit: BoxFit.cover,),
       ),
     );
   }

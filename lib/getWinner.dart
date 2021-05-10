@@ -1,8 +1,13 @@
 import './minimax.dart';
+import './lst.dart';
+
 int xx, yy, zz;
 String winner = "";
 
 bool colorWinner(int n) {
+  if (getWinner(LST) == "Tie") {
+    return true;
+  }
   if (n == xx || n == yy || n == zz) {
     return true;
   }
@@ -20,8 +25,8 @@ void reset(List<String> LST) {
     LST[i] = "";
   }
   getWinnerColored(-1, -1, -1);
-    winner = "";
-    Xchance = true;
+  winner = "";
+  Xchance = true;
 }
 
 String getWinner(List<String> LST) {

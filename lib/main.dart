@@ -1,7 +1,5 @@
 import 'package:tic_tac_toe/choosePlayer_screen.dart';
 import 'package:tic_tac_toe/splash_scree.dart';
-import './getWinner.dart';
-import './minimax.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
@@ -30,15 +28,13 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.red,
       ),
       home: AnimatedSplashScreen(
-          duration: 3000,
-          splash: SplashScreen(),
-          nextScreen: ChoosePlayerScreen(),
-          // splashTransition: SplashTransition.fadeTransition,
-          // pageTransitionType: PageTransitionType.scale,
-          // backgroundColor: Colors.blue,
-        ),
-
-      
+        duration: 2000,
+        splash: SplashScreen(),
+        nextScreen: ChoosePlayerScreen(),
+        // splashTransition: SplashTransition.fadeTransition,
+        // pageTransitionType: PageTransitionType.scale,
+        // backgroundColor: Colors.blue,
+      ),
     );
   }
 }

@@ -5,9 +5,7 @@ String ai = "O";
 String human = "X";
 bool Xchance = true;
 
-
 bool isBotEnabled = false;
-
 
 void bestMove(List<String> LST) {
   if (getWinner(LST) != "") {
