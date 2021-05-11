@@ -1,12 +1,10 @@
 import 'package:tic_tac_toe/choosePlayer_screen.dart';
+import 'package:tic_tac_toe/home_page_screen.dart';
+import 'package:tic_tac_toe/lst.dart';
 import 'package:tic_tac_toe/splash_scree.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
-
-import 'package:animated_splash_screen/animated_splash_screen.dart';
-import 'package:flutter/material.dart';
-import 'package:page_transition/page_transition.dart';
 
 void main() {
 // Restrict to vertical mode
@@ -25,14 +23,19 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         primarySwatch: Colors.green,
+        // primarySwatch: themeGreen,
         accentColor: Colors.red,
       ),
       home: AnimatedSplashScreen(
+        splashIconSize: 1000,
         duration: 2000,
         splash: SplashScreen(),
+        // splash: MyHomePage(),
         nextScreen: ChoosePlayerScreen(),
+        // nextScreen: MyHomePage(),
         // splashTransition: SplashTransition.fadeTransition,
         // pageTransitionType: PageTransitionType.scale,
+        backgroundColor: themeBlack,
         // backgroundColor: Colors.blue,
       ),
     );

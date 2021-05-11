@@ -14,109 +14,111 @@ class ChoosePlayerScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Choose Opponent'),
+        backgroundColor: themeGreen,
       ),
       body: Container(
         width: double.infinity,
+        color: themeBlack,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              // crossAxisAlignment: CrossAxisAlignment.center,
+            Container(
+              // margin: EdgeInsets.all(10),
+              height: boxLength * 0.2,
+              width: boxLength * 0.8,
+              child: InkWell(
+                onTap: () {
+                  isBotEnabled = true;
+                  reset(LST);
 
-              children: [
-                Container(
-                  // margin: EdgeInsets.all(10),
-                  height: boxLength * 0.4,
-                  width: boxLength * 0.4,
-                  child: InkWell(
-                    onTap: () {
-                      isBotEnabled = true;
-                      reset(LST);
-
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (_) {
-                            return MyHomePage();
-                          },
-                        ),
-                      );
-                    },
-                    splashColor: Theme.of(context).primaryColor,
-                    borderRadius: BorderRadius.circular(15),
-                    child: Container(
-                      padding: const EdgeInsets.all(10),
-                      // margin: const EdgeInsets.all(10),
-                      child: Center(
-                        child: Text(
-                          "BOT",
-                          style: TextStyle(
-                            fontSize: boxLength * 0.3 * 0.3,
-                            color: Colors.black.withOpacity(0.9),
-                            // fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                            colors: [
-                              Colors.green.withOpacity(0.7),
-                              Colors.green,
-                            ],
-                            begin: AlignmentDirectional.topStart,
-                            end: AlignmentDirectional.bottomEnd),
-                        borderRadius: BorderRadius.circular(15),
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) {
+                        return MyHomePage();
+                      },
+                    ),
+                  );
+                },
+                splashColor: themeGreen,
+                // borderRadius: BorderRadius.circular(15),
+                child: Container(
+                  padding: const EdgeInsets.all(10),
+                  // margin: const EdgeInsets.all(10),
+                  child: Center(
+                    child: Text(
+                      "BOT",
+                      style: TextStyle(
+                        fontSize: boxLength * 0.3 * 0.3,
+                        // color: themeYellow,
+                        color: Colors.white,
+                        // fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                        colors: [
+                          themeGreen.withOpacity(0.7),
+                          themeGreen,
+                        ],
+                        begin: AlignmentDirectional.topStart,
+                        end: AlignmentDirectional.bottomEnd),
+                    // borderRadius: BorderRadius.circular(15),
+                  ),
                 ),
-                Container(
-                  height: boxLength * 0.4,
-                  width: boxLength * 0.4,
-                  // margin: EdgeInsets.all(10),
-                  child: InkWell(
-                    onTap: () {
-                      isBotEnabled = false;
-                      reset(LST);
+              ),
+            ),
+            SizedBox(
+              height: 50,
+            ),
+            Container(
+              // height: boxLength * 0.4,
+              // width: boxLength * 0.4,
+              height: boxLength * 0.2,
+              width: boxLength * 0.8,
+              // margin: EdgeInsets.all(10),
+              child: InkWell(
+                onTap: () {
+                  isBotEnabled = false;
+                  reset(LST);
 
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (_) {
-                            return MyHomePage();
-                          },
-                        ),
-                      );
-                    },
-                    splashColor: Theme.of(context).primaryColor,
-                    borderRadius: BorderRadius.circular(15),
-                    child: Container(
-                      padding: const EdgeInsets.all(10),
-                      // margin: const EdgeInsets.all(10),
-                      child: Center(
-                        child: Text(
-                          "HUMAN",
-                          style: TextStyle(
-                            fontSize: boxLength * 0.3 * 0.3,
-                            color: Colors.black.withOpacity(0.9),
-                            // fontWeight: FontWeight.bold
-                          ),
-                        ),
-                      ),
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                            colors: [
-                              Colors.green.withOpacity(0.7),
-                              Colors.green,
-                            ],
-                            begin: AlignmentDirectional.topStart,
-                            end: AlignmentDirectional.bottomEnd),
-                        borderRadius: BorderRadius.circular(15),
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) {
+                        return MyHomePage();
+                      },
+                    ),
+                  );
+                },
+                splashColor: themeGreen,
+                // borderRadius: BorderRadius.circular(15),
+                child: Container(
+                  padding: const EdgeInsets.all(10),
+                  // margin: const EdgeInsets.all(10),
+                  child: Center(
+                    child: Text(
+                      "HUMAN",
+                      style: TextStyle(
+                        fontSize: boxLength * 0.3 * 0.3,
+                        // color: themeOrange,
+                        color: Colors.white,
+                        // fontWeight: FontWeight.bold
                       ),
                     ),
                   ),
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                        colors: [
+                          themeGreen.withOpacity(0.7),
+                          themeGreen,
+                        ],
+                        begin: AlignmentDirectional.topStart,
+                        end: AlignmentDirectional.bottomEnd),
+                    // borderRadius: BorderRadius.circular(15),
+                  ),
                 ),
-              ],
+              ),
             ),
           ],
         ),
