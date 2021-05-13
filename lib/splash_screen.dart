@@ -6,6 +6,8 @@ class SplashScreen extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Container(
+          padding: EdgeInsets.all(5),
+          margin: EdgeInsets.all(5),
           // width: double.infinity,
 
           // color: themeBlack,
