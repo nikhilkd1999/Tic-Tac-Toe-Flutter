@@ -37,7 +37,6 @@ For the <em>BOT</em> as opponent player we have implemented **Min-Max** algorith
  <table>
   <tr>
     <td>Game in Middle</td>
-     <td>Add Transaction Modal</td>
      <td>X Won</td>
   </tr>
   <tr>
